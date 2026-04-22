@@ -2077,3 +2077,12 @@ addLog(
 addLog("=".repeat(50));
 
 createBot();
+const express = require('express');
+const app = express();
+const port = 3100;//buraya karışmayın.
+
+app.get('/', (req, res) => res.send('we discord'));//değiştirebilirsiniz.
+
+app.listen(port, () =>
+console.log(`Bot bu adres üzerinde çalışıyor: http://localhost:${port}`)//port
+);
